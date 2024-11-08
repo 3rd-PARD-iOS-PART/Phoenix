@@ -22,6 +22,10 @@
 		22C4C92B2C0107F600157FC1 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C4C92A2C0107F600157FC1 /* PhotoViewController.swift */; };
 		22C4C92D2C0107FC00157FC1 /* repoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C4C92C2C0107FC00157FC1 /* repoViewController.swift */; };
 		22C4C92F2C01080100157FC1 /* uploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C4C92E2C01080000157FC1 /* uploadViewController.swift */; };
+		482F709D2CDE155E005B9D10 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482F709C2CDE155E005B9D10 /* CustomCell.swift */; };
+		482F709F2CDE1566005B9D10 /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482F709E2CDE1566005B9D10 /* RepoModel.swift */; };
+		482F70A32CDE1668005B9D10 /* CHTCollectionViewWaterfallLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 482F70A22CDE1668005B9D10 /* CHTCollectionViewWaterfallLayout */; };
+		482F70A52CDE1668005B9D10 /* CHTCollectionViewWaterfallLayoutObjC in Frameworks */ = {isa = PBXBuildFile; productRef = 482F70A42CDE1668005B9D10 /* CHTCollectionViewWaterfallLayoutObjC */; };
 		489B2D912C010A1500158D34 /* modalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489B2D902C010A1500158D34 /* modalViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,8 @@
 		22C4C92A2C0107F600157FC1 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		22C4C92C2C0107FC00157FC1 /* repoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = repoViewController.swift; sourceTree = "<group>"; };
 		22C4C92E2C01080000157FC1 /* uploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = uploadViewController.swift; sourceTree = "<group>"; };
+		482F709C2CDE155E005B9D10 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		482F709E2CDE1566005B9D10 /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
 		489B2D902C010A1500158D34 /* modalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				482F70A52CDE1668005B9D10 /* CHTCollectionViewWaterfallLayoutObjC in Frameworks */,
+				482F70A32CDE1668005B9D10 /* CHTCollectionViewWaterfallLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,8 +128,10 @@
 				22C4C8EE2C00C76200157FC1 /* SceneDelegate.swift */,
 				489B2D902C010A1500158D34 /* modalViewController.swift */,
 				22C4C8F02C00C76200157FC1 /* ViewController.swift */,
+				482F709E2CDE1566005B9D10 /* RepoModel.swift */,
 				22C4C92A2C0107F600157FC1 /* PhotoViewController.swift */,
 				22C4C92C2C0107FC00157FC1 /* repoViewController.swift */,
+				482F709C2CDE155E005B9D10 /* CustomCell.swift */,
 				22C4C92E2C01080000157FC1 /* uploadViewController.swift */,
 				22C4C8F22C00C76200157FC1 /* Main.storyboard */,
 				22C4C8F52C00C76800157FC1 /* Assets.xcassets */,
@@ -236,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 22C4C8E02C00C76200157FC1;
+			packageReferences = (
+				482F70A12CDE1588005B9D10 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */,
+			);
 			productRefGroup = 22C4C8EA2C00C76200157FC1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -281,8 +294,10 @@
 			files = (
 				22C4C92D2C0107FC00157FC1 /* repoViewController.swift in Sources */,
 				22C4C8F12C00C76200157FC1 /* ViewController.swift in Sources */,
+				482F709D2CDE155E005B9D10 /* CustomCell.swift in Sources */,
 				489B2D912C010A1500158D34 /* modalViewController.swift in Sources */,
 				22C4C9272C0107D400157FC1 /* APIService.swift in Sources */,
+				482F709F2CDE1566005B9D10 /* RepoModel.swift in Sources */,
 				22C4C8ED2C00C76200157FC1 /* AppDelegate.swift in Sources */,
 				22C4C8EF2C00C76200157FC1 /* SceneDelegate.swift in Sources */,
 				22C4C92B2C0107F600157FC1 /* PhotoViewController.swift in Sources */,
@@ -470,10 +485,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SS3GLDCWXY;
+				DEVELOPMENT_TEAM = 55JW9PZ4J9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Phoenix_Project/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "청춘뽑기";
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"앱에서 카메라를 사용하기 위하여 카메라에 접근권한을 요청합니다\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -484,7 +500,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.HyunjoongKim.Phoenix-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minzzzunPhoenix-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -499,10 +515,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SS3GLDCWXY;
+				DEVELOPMENT_TEAM = 55JW9PZ4J9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Phoenix_Project/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "청춘뽑기";
+				INFOPLIST_KEY_NSCameraUsageDescription = "\"앱에서 카메라를 사용하기 위하여 카메라에 접근권한을 요청합니다\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -513,7 +530,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.HyunjoongKim.Phoenix-Project";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.minzzzunPhoenix-Project";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -633,6 +650,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		482F70A12CDE1588005B9D10 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chiahsien/CHTCollectionViewWaterfallLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		482F70A22CDE1668005B9D10 /* CHTCollectionViewWaterfallLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 482F70A12CDE1588005B9D10 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */;
+			productName = CHTCollectionViewWaterfallLayout;
+		};
+		482F70A42CDE1668005B9D10 /* CHTCollectionViewWaterfallLayoutObjC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 482F70A12CDE1588005B9D10 /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */;
+			productName = CHTCollectionViewWaterfallLayoutObjC;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22C4C8E12C00C76200157FC1 /* Project object */;
 }

@@ -31,11 +31,7 @@ class modalViewController: UIViewController {
         mainImage.translatesAutoresizingMaskIntoConstraints = false
         return mainImage
     }()
-<<<<<<< HEAD
-//
-//
-=======
->>>>>>> 99bd656 (마ㅣ막)
+
     
     let weatherIconView: UIImageView = {
         let iconView = UIImageView()

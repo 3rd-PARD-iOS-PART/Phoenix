@@ -75,6 +75,7 @@ class uploadViewController: UIViewController {
         let tv = LinedTextView()
         tv.font = UIFont.systemFont(ofSize: 16)
         tv.textAlignment = .left
+        tv.backgroundColor = .white
         tv.textContainerInset = UIEdgeInsets(top: 10, left: 5, bottom: 10, right: 5) // 텍스트 뷰의 패딩 설정
         tv.placeholder = "이 청춘에 대한 당신의 이야기를 들려주세요."
         return tv
